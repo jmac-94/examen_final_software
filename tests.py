@@ -48,8 +48,7 @@ class TestPagos(ut.TestCase):
     def test_pagar_valor_muy_alto(self):
         '''
             Caso de prueba de error:
-            Intenta pagar a un contacto que no existe
-            en la lista de contactos de la cuenta emisora del pago
+            Intenta pagar un valor mayor al que el emisor puede
         '''
 
         response = client.get('/billetera/pagar?minumero=21345&numerodestino=123&valor=50000')
